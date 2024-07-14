@@ -25,12 +25,9 @@ It runs through the updating of cache, updating base packages, then installs the
 - network-manager-openconnect
 - network-manager-openconnect-gnome
 - calibre
-- codium
-- Steam
-- Spotify
 - Google Chrome
 
-Once those are installed, I also place Steam and Spotify from ``snap`` and ``flatpak``.
+Once those are installed, I also place VSCodium, Steam and Spotify from ``snap`` and ``flatpak``.
 
 ## Adding dotfiles
 
