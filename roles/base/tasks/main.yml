@@ -2,6 +2,7 @@
   become: yes
   package:
     name:
+      - screen
       - git
       - nano
       - tmux
@@ -34,6 +35,7 @@
       - network-manager-openconnect
       - network-manager-openconnect-gnome
       - calibre
+      - transmission-gtk
     state: present
 
 - name: Install flatpaks

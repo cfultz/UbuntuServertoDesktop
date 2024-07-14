@@ -26,6 +26,11 @@ It runs through the updating of cache, updating base packages, then installs the
 - network-manager-openconnect-gnome
 - calibre
 - Google Chrome
+- Docker
+- nVidia Drivers
+- neofetch
+- screen
+- transmission-gtk
 
 Once those are installed, I also place VSCodium, Steam and Spotify from ``snap`` and ``flatpak``.
 
