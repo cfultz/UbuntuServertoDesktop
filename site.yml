@@ -14,3 +14,6 @@
   become: true
   roles: 
     - base
+    - ppa
+    - docker
+    - nvidia

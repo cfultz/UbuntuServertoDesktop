@@ -1,0 +1,11 @@
+- name: Add neofetch
+  apt_repository:
+    validate_certs: no 
+    repo: 'ppa:zhangsongcui3371/fastfetch'
+    state: present
+
+- name: Add nVidia
+  apt_repository:
+    validate_certs: no 
+    repo: 'ppa:graphics-drivers/ppa'
+    state: present

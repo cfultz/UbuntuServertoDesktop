@@ -1,0 +1,7 @@
+- name: Install nVidia Drivers
+  become: yes
+  package:
+    name:
+      - nvidia-driver-555
+      - nvidia-dkms-555
+    state: present
