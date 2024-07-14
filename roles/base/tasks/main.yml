@@ -2,27 +2,31 @@
   become: yes
   package:
     name:
-      - openssh-server
       - git
       - nano
       - tmux
       - rsync
       - htop
       - python3
-      - python-pip
+      - python3-pip
       - build-essential
+      - fail2ban
+    state: present
 
 
 - name: Install GNOME3 Desktop with extensions
   become: yes
   package:
+    name:
       - ubuntu-desktop
       - task-gnome-desktop
       - gnome-shell-extensions
+    state: present
 
 - name: Install GUI apps
   become: yes
   package:
+    name:
       - terminator
       - flatpak
       - gnome-shell-extensions
@@ -32,6 +36,7 @@
       - network-manager-openconnect
       - network-manager-openconnect-gnome
       - calibre
+    state: present
 
 - name: Install flatpaks
   become: yes
@@ -45,6 +50,7 @@
   community.general.snap:
     name:
       - steam
+    state: present
 
 - name: Install Chrome
   become: yes
