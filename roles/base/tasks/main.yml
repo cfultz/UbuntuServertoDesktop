@@ -1,0 +1,52 @@
+- name: Install packages
+  become: yes
+  package:
+    name:
+      - openssh-server
+      - git
+      - nano
+      - tmux
+      - rsync
+      - htop
+      - python3
+      - python-pip
+      - build-essential
+
+
+- name: Install GNOME3 Desktop with extensions
+  become: yes
+  package:
+      - ubuntu-desktop
+      - task-gnome-desktop
+      - gnome-shell-extensions
+
+- name: Install GUI apps
+  become: yes
+  package:
+      - terminator
+      - flatpak
+      - gnome-shell-extensions
+      - gimp
+      - snapd
+      - openconnect
+      - network-manager-openconnect
+      - network-manager-openconnect-gnome
+      - calibre
+
+- name: Install flatpaks
+  become: yes
+  community.general.flatpak:
+    name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
+    state: present
+
+
+- name: Install snaps
+  become: yes
+  community.general.snap:
+    name:
+      - steam
+
+- name: Install Chrome
+  become: yes
+  apt:
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
