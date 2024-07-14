@@ -28,7 +28,6 @@
   package:
     name:
       - terminator
-      - flatpak
       - gimp
       - snapd
       - openconnect
@@ -39,19 +38,32 @@
 
 - name: Install flatpaks
   become: yes
+  package:
+    name: flatpak
+  state: present
   community.general.flatpak:
     name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
     state: present
 
 
-- name: Install snaps
+- name: Install Steam snap
   become: yes
   community.general.snap:
     name:
       - steam
+      - code
+    state: present
+  
+- name: Install Codium snap
+  become: yes
+  community.general.snap:
+    name:
+      - code
+    classic: true
     state: present
 
 - name: Install Chrome
   become: yes
+  tags: chrome
   apt:
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
