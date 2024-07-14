@@ -29,7 +29,6 @@
     name:
       - terminator
       - flatpak
-      - gnome-shell-extensions
       - gimp
       - snapd
       - openconnect
