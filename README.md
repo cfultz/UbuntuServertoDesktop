@@ -6,25 +6,29 @@ I started with a base server ISO of Ubuntu 24.04 and used Ansible to configure i
 
 It runs through the updating of cache, updating base packages, then installs the following:
 
-    - GNOME 3 Desktop
-    - GNOME Extensions
-    - git
-    - nano
-    - tmux
-    - rsync
-    - htop
-    - python3
-    - python3-pip
-    - build-essential
-    - fail2ban
-    - terminator
-    - flatpak
-    - gimp
-    - snapd
-    - openconnect
-    - network-manager-openconnect
-    - network-manager-openconnect-gnome
-    - calibre
+- GNOME 3 Desktop
+- GNOME Extensions
+- git
+- nano
+- tmux
+- rsync
+- htop
+- python3
+- python3-pip
+- build-essential
+- fail2ban
+- terminator
+- flatpak
+- gimp
+- snapd
+- openconnect
+- network-manager-openconnect
+- network-manager-openconnect-gnome
+- calibre
+- codium
+- Steam
+- Spotify
+- Google Chrome
 
 Once those are installed, I also place Steam and Spotify from ``snap`` and ``flatpak``.
 
