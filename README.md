@@ -1,38 +1,12 @@
 # Ubuntu Server to Desktop
 
-I started with a base server ISO of Ubuntu 24.04 and used Ansible to configure it into a usable desktop environment. 
+I started with a base server ISO of Ubuntu 24.04 and used Ansible to configure it into a usable desktop environment. This is my first full playbook so it might be gross, but it *DOES* fully work.
 
 ## What's it do?
 
-It runs through the updating of cache, updating base packages, then installs the following:
+This playbook has multiple roles (mostly tagged, but I'll update it as I go) that you can decide on which you want to run in the ```site.yml``` before you get going.
 
-- GNOME 3 Desktop
-- GNOME Extensions
-- git
-- nano
-- tmux
-- rsync
-- htop
-- python3
-- python3-pip
-- build-essential
-- fail2ban
-- terminator
-- flatpak
-- gimp
-- snapd
-- openconnect
-- network-manager-openconnect
-- network-manager-openconnect-gnome
-- calibre
-- Google Chrome
-- Docker
-- nVidia Drivers
-- neofetch
-- screen
-- transmission-gtk
-
-Once those are installed, I also place VSCodium, Steam and Spotify from ``snap`` and ``flatpak``.
+This playbook was built for me to install my new desktop environment so it may need tweaking for your tastes. 
 
 ## Adding dotfiles
 
