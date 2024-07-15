@@ -1,0 +1,25 @@
+- name: Install GUI apps
+  become: yes
+  package:
+    name:
+      - terminator
+      - gimp
+      - snapd
+      - openconnect
+      - network-manager-openconnect
+      - network-manager-openconnect-gnome
+      - calibre
+      - transmission-gtk
+    state: present
+
+- name: Install Chrome
+  become: yes
+  tags: chrome
+  apt:
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+- name: Install fastfetch
+  become: yes
+  tags: fastfetch
+  apt:
+   deb: https://github.com/fastfetch-cli/fastfetch/releases/download/2.18.1/fastfetch-linux-amd64.deb

@@ -12,8 +12,11 @@
 
 - hosts: all
   become: true
-  roles: 
+  roles:
     - base
+    - gnome
+    - gui_apps
+    - extra_apps
     - ppa
     - docker
     - nvidia

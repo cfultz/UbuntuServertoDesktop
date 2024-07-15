@@ -1,0 +1,21 @@
+- name: Install Spotify flatpak
+  become: yes
+  community.general.flatpak:
+    name:  https://dl.flathub.org/repo/appstream/com.spotify.Client.flatpakref
+    state: present
+
+
+- name: Install Steam snap
+  become: yes
+  community.general.snap:
+    name:
+      - steam
+    state: present
+
+- name: Install Codium snap
+  become: yes
+  community.general.snap:
+    name:
+      - code
+    classic: true
+    state: present

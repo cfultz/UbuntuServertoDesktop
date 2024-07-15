@@ -1,0 +1,9 @@
+- name: Install GNOME3 Desktop with extensions
+  become: yes
+  package:
+    name:
+      - ubuntu-desktop
+      - task-gnome-desktop
+      - gnome-shell-extensions
+      - flatpak
+    state: present
