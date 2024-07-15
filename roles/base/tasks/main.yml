@@ -22,6 +22,7 @@
       - ubuntu-desktop
       - task-gnome-desktop
       - gnome-shell-extensions
+      - flatpak
     state: present
 
 - name: Install GUI apps
@@ -40,11 +41,8 @@
 
 - name: Install flatpaks
   become: yes
-  package:
-    name: flatpak
-  state: present
   community.general.flatpak:
-    name:  https://s3.amazonaws.com/alexlarsson/spotify-repo/spotify.flatpakref
+    name:  https://dl.flathub.org/repo/appstream/com.spotify.Client.flatpakref
     state: present
 
 
@@ -55,7 +53,7 @@
       - steam
       - code
     state: present
-  
+
 - name: Install Codium snap
   become: yes
   community.general.snap:
@@ -68,4 +66,10 @@
   become: yes
   tags: chrome
   apt:
-    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+- name: Install fastfetch
+  become: yes
+  tags: fastfetch
+  apt:
+   deb: https://github.com/fastfetch-cli/fastfetch/releases/download/2.18.1/fastfetch-linux-amd64.deb
