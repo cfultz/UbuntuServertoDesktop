@@ -4,6 +4,13 @@
     repo: 'ppa:zhangsongcui3371/fastfetch'
     state: present
 
+- name: Install packages
+  become: yes
+  package:
+    name:
+      - fastfetch
+    state: present
+
 - name: Add nVidia
   apt_repository:
     validate_certs: no 

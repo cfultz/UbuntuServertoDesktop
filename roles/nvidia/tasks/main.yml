@@ -5,3 +5,5 @@
       - nvidia-driver-555
       - nvidia-dkms-555
     state: present
+
+    sudo dpkg --add-architecture i386

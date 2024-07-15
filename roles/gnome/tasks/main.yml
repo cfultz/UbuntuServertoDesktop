@@ -5,5 +5,6 @@
       - ubuntu-desktop
       - task-gnome-desktop
       - gnome-shell-extensions
+      - gnome-shell-extension-manager
       - flatpak
     state: present
